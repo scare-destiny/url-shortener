@@ -5,7 +5,7 @@ import { generateBaseMetadata } from '@/utils/metadata'
 import type { DefaultPageProps } from '@/types/params'
 
 export const metadata = generateBaseMetadata({
-  title: 'Sign in to Xlug',
+  title: 'Sign in to ',
   description: 'Start shorting and managing long URLs.',
 })
 
