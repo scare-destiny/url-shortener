@@ -1,4 +1,4 @@
-export const PROD_BASE_URL = 'https://xlug.vercel.app'
+export const PROD_BASE_URL = 'https://link.venger.me'
 
 export const HOST_ICON_PLACEHOLDER = new URL('/assets/host-icon-placeholder.png', PROD_BASE_URL).toString()
 
