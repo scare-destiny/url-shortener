@@ -2,8 +2,7 @@ export const PROD_BASE_URL = 'https://xlug.vercel.app'
 
 export const HOST_ICON_PLACEHOLDER = new URL('/assets/host-icon-placeholder.png', PROD_BASE_URL).toString()
 
-export const BASE_URL =
-  process.env.NODE_ENV === 'production' ? PROD_BASE_URL : 'https://url-shortener-taupe-eta.vercel.app/'
+export const BASE_URL = process.env.NODE_ENV === 'production' ? PROD_BASE_URL : 'https://link.venger.me/'
 
 export const ICON_FROM_HOST_URL = 'https://unavatar.io/google'
 
