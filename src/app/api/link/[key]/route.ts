@@ -51,7 +51,7 @@ export const PATCH = routeHandler(
       .from('links')
       .update({
         ...body,
-        clickCount: body.clickCount ?? 0, // Assign a default value of 0 if clickCount is undefined
+        clickCount: 0,
       })
       .eq('key', key.data)
       .eq('userId', ctx.session.user.id)
