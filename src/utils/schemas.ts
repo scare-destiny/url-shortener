@@ -41,10 +41,17 @@ export const DescriptionSchema = z
   // eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
   .transform(v => v || null)
 
+export const ClickCountSchema = z
+  .number()
+  .min(0, 'Click count cannot be negative')
+  .int('Click count must be an integer')
+  .default(0)
+
 export const LinkSchema = z.object({
   key: KeySchema,
   destination: DestinationSchema,
   description: DescriptionSchema,
+  clickCount: ClickCountSchema.optional(),
 })
 
 export const EditLinkSchema = LinkSchema.partial()

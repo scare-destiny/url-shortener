@@ -8,6 +8,7 @@ export interface Database {
           createdAt: string
           description: string | null
           destination: string
+          clickCount: number
           id: string
           key: string
           userId: string | null
@@ -16,6 +17,7 @@ export interface Database {
           createdAt?: string
           description?: string | null
           destination: string
+          clickCount: number
           id?: string
           key: string
           userId?: string | null
@@ -24,6 +26,7 @@ export interface Database {
           createdAt?: string
           description?: string | null
           destination?: string
+          clickCount: number
           id?: string
           key?: string
           userId?: string | null
