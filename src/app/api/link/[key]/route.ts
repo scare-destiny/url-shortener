@@ -49,7 +49,10 @@ export const PATCH = routeHandler(
 
     const { data } = await supabase
       .from('links')
-      .update(body)
+      .update({
+        ...body,
+        clickCount: body.clickCount ?? 0, // Assign a default value of 0 if clickCount is undefined
+      })
       .eq('key', key.data)
       .eq('userId', ctx.session.user.id)
       .select('*')
