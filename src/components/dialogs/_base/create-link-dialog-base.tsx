@@ -48,6 +48,7 @@ export function CreateLinkDialogBase({
       key: initialValues?.key ?? '',
       description: initialValues?.description ?? '',
       destination: initialValues?.destination ?? '',
+      clickCount: 0,
     },
     resolver,
   })
