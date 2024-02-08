@@ -24,6 +24,7 @@ export const POST = routeHandler(
         description,
         destination,
         userId: ctx.session.user.id,
+        clickCount: 0,
       })
       .select('*')
       .maybeSingle()
