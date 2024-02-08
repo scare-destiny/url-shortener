@@ -51,7 +51,7 @@ export const LinkSchema = z.object({
   key: KeySchema,
   destination: DestinationSchema,
   description: DescriptionSchema,
-  clickCount: ClickCountSchema.optional(),
+  clickCount: ClickCountSchema,
 })
 
 export const EditLinkSchema = LinkSchema.partial()

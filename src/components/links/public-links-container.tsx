@@ -42,6 +42,7 @@ export function PublicLinksContainer() {
             userId: null,
             key: 'github',
             description: siteConfig.description,
+            clickCount: 0,
             createdAt: new Date().toISOString(),
             destination: siteConfig.examples.link,
           }}

@@ -63,6 +63,7 @@ export function LinkCard({ link }: LinkCardProps) {
       <div className='flex min-w-0 items-start'>
         <p className='truncate text-sm text-neutral-500 dark:text-neutral-400'>
           {link.description ?? 'No description provided.'}
+          Number of clicks {link.clickCount}
         </p>
       </div>
     </div>
