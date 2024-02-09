@@ -1,5 +1,4 @@
 import { NextResponse, type NextRequest } from 'next/server'
-import { createClient } from '@supabase/supabase-js'
 import { createMiddlewareClient } from '@supabase/auth-helpers-nextjs'
 import { AUTH_PAGES, REDIRECT_ON_AUTH_PAGES } from '@/config/constants'
 import { KeySchema } from './schemas'
@@ -66,13 +65,7 @@ export async function LinksMiddleware(req: NextRequest) {
 
     if (!data) throw Error('Link not found')
 
-    // Create a new supabase client without a session
-    const supabaseAnon = createClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL ?? '',
-      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? ''
-    )
-
-    await supabaseAnon
+    await supabase
       .from('links')
       .update({ clickCount: data.clickCount + 1 })
       .eq('key', key)
