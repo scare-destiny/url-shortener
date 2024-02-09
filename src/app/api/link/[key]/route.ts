@@ -47,21 +47,11 @@ export const PATCH = routeHandler(
 
     const supabase = createRouteHandlerClient<Database>({ cookies })
 
-    const { data: linkData } = await supabase
-      .from('links')
-      .select('clickCount')
-      .eq('key', key.data)
-      .eq('userId', ctx.session.user.id)
-      .maybeSingle()
-      .throwOnError()
-
-    if (!linkData) throw new NotFoundError(`Could not found a link with key "${key.data}"`)
-
     const { data } = await supabase
       .from('links')
       .update({
         ...body,
-        clickCount: linkData.clickCount + 1,
+        clickCount: 0,
       })
       .eq('key', key.data)
       .eq('userId', ctx.session.user.id)

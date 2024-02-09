@@ -58,12 +58,18 @@ export async function LinksMiddleware(req: NextRequest) {
 
     const { data } = await supabase
       .from('links')
-      .select('id, key, destination')
+      .select('id, key, destination, clickCount')
       .eq('key', key)
       .maybeSingle()
       .throwOnError()
 
     if (!data) throw Error('Link not found')
+
+    await supabase
+      .from('links')
+      .update({ clickCount: data.clickCount + 1 })
+      .eq('key', key)
+      .throwOnError()
 
     return NextResponse.redirect(data.destination)
   } catch (error) {
