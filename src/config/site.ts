@@ -12,8 +12,8 @@ export const siteConfig = {
     issues: generateShortLink('issues'),
   },
   examples: {
-    key: 'github',
-    link: 'https://github.com/iswilljr/xlug',
+    key: 'twitter',
+    link: 'https://twitter.com',
     description: 'Short and Manage your Long URLs',
   },
 }

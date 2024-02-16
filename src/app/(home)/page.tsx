@@ -1,10 +1,10 @@
 import { PublicLinksContainer } from '@/components/links/public-links-container'
 import { CreatePublicLinkForm } from '@/components/forms/create-public-link'
 import { AuthButton } from '@/components/auth/auth-button'
-import { IconGithub } from '@/components/icons'
-import { siteConfig } from '@/config/site'
-import { buttonVariants } from '@/ui/button'
-import { cn } from '@/utils/cn'
+// import { IconGithub } from '@/components/icons'
+// import { siteConfig } from '@/config/site'
+// import { buttonVariants } from '@/ui/button'
+// import { cn } from '@/utils/cn'
 
 export default function Page() {
   return (
@@ -26,7 +26,7 @@ export default function Page() {
             authLabel='Get Started'
             loginLabel='Get Started'
           />
-          <a
+          {/* <a
             className={cn(buttonVariants({ variant: 'outline' }), 'gap-1 rounded-full px-5 shadow-lg')}
             href={siteConfig.links.github}
             target='_blank'
@@ -34,7 +34,7 @@ export default function Page() {
           >
             <IconGithub className='flex-shrink-0' size={20} />
             Star on Github
-          </a>
+          </a> */}
         </div>
       </section>
       <section className='mx-auto mt-10 max-w-sm space-y-2 text-center md:max-w-md'>
