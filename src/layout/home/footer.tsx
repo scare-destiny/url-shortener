@@ -6,14 +6,14 @@ export function HomeFooter() {
     <footer className='z-30 w-full border-t border-neutral-200 bg-white transition-colors dark:border-neutral-800 dark:bg-neutral-950'>
       <div className='mx-auto flex h-14 w-full max-w-screen-xl items-center justify-between px-6 md:px-20'>
         <p className='text-sm text-neutral-500 dark:text-neutral-400'>
-          Made by{' '}
+          Forked{' '}
           <a
             className='font-bold text-black dark:text-neutral-200'
-            href={siteConfig.links.profile}
+            href='https://xlug.vercel.app/github'
             target='_blank'
             rel='noreferrer'
           >
-            Will
+            Will's Repo
           </a>
         </p>
         <a
